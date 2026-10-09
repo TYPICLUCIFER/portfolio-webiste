@@ -1,9 +1,9 @@
 import type { TrustIndicator } from '../types';
 
 export const siteConfig = {
-  // Brand identity - replace with your brand name
-  brandName: '[YOUR BRAND NAME]',
-  brandShortName: 'STUDIO',
+  // Brand identity
+  brandName: 'Shivang Bajpai',
+  brandShortName: 'SHIVANG',
   brandTagline: 'Beautiful Websites for Growing Brands',
   brandDescription:
     'Choose from curated, professionally architected website templates or request a bespoke digital experience tailored to your exact business goals.',
