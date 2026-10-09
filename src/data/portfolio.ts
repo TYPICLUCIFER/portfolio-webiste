@@ -1,0 +1,68 @@
+import type { PortfolioItem } from '../types';
+
+export const portfolioItems: PortfolioItem[] = [
+  {
+    id: 'kavya-handcrafted',
+    title: 'Kāvya Fine Jewelry & Silver',
+    client: 'Kāvya Artisans Studio',
+    category: 'E-commerce & Luxury',
+    year: '2025',
+    description: 'A bespoke editorial e-commerce platform for handcrafted 925 sterling silver jewelry with custom product galleries and Razorpay checkout.',
+    coverImage: 'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=1200&q=80',
+    liveUrl: 'https://example.com/kavya-silver',
+    tags: ['E-commerce', 'Razorpay', 'Lookbook', 'Custom Typography'],
+    results: [
+      '3.2x increase in mobile conversions',
+      'Average checkout time reduced to 42 seconds',
+      'Sub-second initial page load on 4G networks',
+    ],
+  },
+  {
+    id: 'aarogyam-dental',
+    title: 'Aarogyam Multi-Speciality Dental Clinic',
+    client: 'Dr. R. Sharma & Associates',
+    category: 'Healthcare & Clinics',
+    year: '2025',
+    description: 'Clean, trust-inspiring clinic portal with direct WhatsApp appointment routing, treatment cost breakdowns, and doctor bio profiles.',
+    coverImage: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80',
+    liveUrl: 'https://example.com/aarogyam-dental',
+    tags: ['Healthcare', 'Appointment Booking', 'WhatsApp Routing', 'Local SEO'],
+    results: [
+      'Over 140+ monthly consultation requests booked',
+      'Top 3 Google local pack ranking for key city keywords',
+      'Zero monthly hosting overhead',
+    ],
+  },
+  {
+    id: 'solaris-architects',
+    title: 'Solaris Architecture & Urbanism',
+    client: 'Solaris Design Studio',
+    category: 'Portfolio & Architecture',
+    year: '2024',
+    description: 'Minimalist editorial portfolio highlighting residential architecture projects, material studies, and published press monographs.',
+    coverImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
+    liveUrl: 'https://example.com/solaris-design',
+    tags: ['Architecture', 'Editorial Layout', 'High-Res Lightbox', 'Design Awards'],
+    results: [
+      'Featured in national design publication',
+      'High client retention and lead inquiry rate',
+      'Perfect 100 Google Lighthouse performance score',
+    ],
+  },
+  {
+    id: 'samvit-classes',
+    title: 'Samvit Institute for Civil Services',
+    client: 'Samvit Educational Trust',
+    category: 'Education & Coaching',
+    year: '2024',
+    description: 'Admissions and course curriculum platform for UPSC/State PSC coaching institute with batch timetables and online brochure downloads.',
+    coverImage: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=80',
+    liveUrl: 'https://example.com/samvit-upsc',
+    tags: ['Education', 'Lead Capture Gate', 'Curriculum System', 'Brochures'],
+    results: [
+      '450+ syllabus downloads in the first launch week',
+      'Streamlined student admission process',
+      'Full mobile responsiveness for student access',
+    ],
+  },
+];

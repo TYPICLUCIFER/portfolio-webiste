@@ -1,0 +1,225 @@
+import type { FashionProduct, FashionOrder } from './types';
+
+export const FASHION_PRODUCTS: FashionProduct[] = [
+  {
+    id: 'freedom-tee',
+    name: 'Freedom Tee',
+    price: 1299,
+    category: 'T-Shirts',
+    image: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1000&q=80',
+    rating: 4.8,
+    reviewsCount: 132,
+    colors: ['Black', 'Grey', 'Off-White'],
+    sizes: ['S', 'M', 'L', 'XL'],
+    description: 'A clean oversized tee with a bold back print. Crafted from 100% premium cotton for all-day comfort. Designed for those who think different.',
+    badge: 'Best Seller',
+  },
+  {
+    id: 'washed-hoodie',
+    name: 'Washed Hoodie',
+    price: 1999,
+    category: 'Hoodies',
+    image: 'https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=1000&q=80',
+    rating: 4.9,
+    reviewsCount: 94,
+    colors: ['Washed Grey', 'Charcoal', 'Bone'],
+    sizes: ['S', 'M', 'L', 'XL'],
+    description: 'Heavyweight loopback French terry hoodie with enzyme wash finish and dropped shoulders.',
+  },
+  {
+    id: 'cargo-pants',
+    name: 'Cargo Pants',
+    price: 1799,
+    category: 'Bottoms',
+    image: 'https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=1000&q=80',
+    rating: 4.7,
+    reviewsCount: 88,
+    colors: ['Beige', 'Olive', 'Black'],
+    sizes: ['S', 'M', 'L', 'XL'],
+    description: 'Relaxed utilitarian cargo trousers with deep bellows pockets and adjustable hem pulls.',
+  },
+  {
+    id: 'oversized-tee',
+    name: 'Oversized Tee',
+    price: 1299,
+    category: 'T-Shirts',
+    image: 'https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=1000&q=80',
+    rating: 4.6,
+    reviewsCount: 65,
+    colors: ['Vintage White', 'Stone', 'Black'],
+    sizes: ['S', 'M', 'L', 'XL'],
+    description: 'Minimalist boxy silhouette with high-density ribbed collar and double-needle seams.',
+  },
+  {
+    id: 'graphic-tee',
+    name: 'Graphic Tee',
+    price: 1499,
+    category: 'T-Shirts',
+    image: 'https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=1000&q=80',
+    rating: 4.8,
+    reviewsCount: 71,
+    colors: ['Vintage Black', 'Off-White'],
+    sizes: ['S', 'M', 'L', 'XL'],
+    description: 'Screen-printed graphic streetwear tee celebrating architectural forms and counter-culture.',
+  },
+  {
+    id: 'shadow-hoodie',
+    name: 'Shadow Hoodie',
+    price: 1999,
+    category: 'Hoodies',
+    image: 'https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&w=1000&q=80',
+    rating: 4.9,
+    reviewsCount: 110,
+    colors: ['Pitch Black', 'Midnight Navy'],
+    sizes: ['S', 'M', 'L', 'XL'],
+    description: 'Double-layered hood with clean crossover neckline, relaxed drape, and ribbed cuffs.',
+  },
+  {
+    id: 'utility-pants',
+    name: 'Utility Pants',
+    price: 1899,
+    category: 'Bottoms',
+    image: 'https://images.unsplash.com/photo-1517445312882-bc9910d016b7?auto=format&fit=crop&w=1000&q=80',
+    rating: 4.7,
+    reviewsCount: 42,
+    colors: ['Dark Charcoal', 'Desert Tan'],
+    sizes: ['S', 'M', 'L', 'XL'],
+    description: 'Durable cotton ripstop pants crafted for city exploration with articulated knees.',
+  },
+  {
+    id: 'denim-jacket',
+    name: 'Denim Jacket',
+    price: 2499,
+    category: 'Outerwear' as any,
+    image: 'https://images.unsplash.com/photo-1551537482-f2075a1d41f2?auto=format&fit=crop&w=1000&q=80',
+    rating: 4.9,
+    reviewsCount: 56,
+    colors: ['Faded Indigo', 'Black Acid'],
+    sizes: ['S', 'M', 'L', 'XL'],
+    description: 'Classic trucker silhouette in 13.5oz washed Japanese-inspired selvedge denim.',
+  },
+  {
+    id: 'minimal-cap',
+    name: 'Minimal Cap',
+    price: 699,
+    category: 'Accessories',
+    image: 'https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=1000&q=80',
+    rating: 4.8,
+    reviewsCount: 39,
+    colors: ['Black', 'Olive', 'Charcoal'],
+    sizes: ['One Size'],
+    description: '6-panel unstructured low-profile dad cap in brushed cotton twill with brass closure.',
+  },
+];
+
+export const INITIAL_CART_ITEMS = [
+  {
+    product: FASHION_PRODUCTS[0], // Freedom Tee
+    selectedColor: 'Black',
+    selectedSize: 'L',
+    quantity: 1,
+  },
+  {
+    product: FASHION_PRODUCTS[1], // Washed Hoodie
+    selectedColor: 'Washed Grey',
+    selectedSize: 'M',
+    quantity: 1,
+  },
+  {
+    product: FASHION_PRODUCTS[2], // Cargo Pants
+    selectedColor: 'Beige',
+    selectedSize: 'L',
+    quantity: 1,
+  },
+];
+
+export const FASHION_ORDERS: FashionOrder[] = [
+  {
+    id: '#AT12345',
+    date: '12 Oct 2026',
+    customerName: 'Rohan S.',
+    total: 1299,
+    status: 'Processing',
+    items: [
+      {
+        name: 'Freedom Tee (Black, L)',
+        image: FASHION_PRODUCTS[0].image,
+        price: 1299,
+      },
+    ],
+  },
+  {
+    id: '#AT12344',
+    date: '28 Sep 2026',
+    customerName: 'Aditi K.',
+    total: 2598,
+    status: 'Shipped',
+    items: [
+      {
+        name: 'Washed Hoodie (Grey, M)',
+        image: FASHION_PRODUCTS[1].image,
+        price: 1999,
+      },
+      {
+        name: 'Minimal Cap (Black)',
+        image: FASHION_PRODUCTS[8].image,
+        price: 599,
+      },
+    ],
+  },
+  {
+    id: '#AT12343',
+    date: '15 Sep 2026',
+    customerName: 'Karan M.',
+    total: 1799,
+    status: 'Delivered',
+    items: [
+      {
+        name: 'Cargo Pants (Beige, L)',
+        image: FASHION_PRODUCTS[2].image,
+        price: 1799,
+      },
+    ],
+  },
+  {
+    id: '#AT12342',
+    date: '10 Sep 2026',
+    customerName: 'Priya V.',
+    total: 1499,
+    status: 'Processing',
+    items: [
+      {
+        name: 'Graphic Tee (Vintage White, M)',
+        image: FASHION_PRODUCTS[4].image,
+        price: 1499,
+      },
+    ],
+  },
+  {
+    id: '#AT12341',
+    date: '02 Sep 2026',
+    customerName: 'Arjun P.',
+    total: 2299,
+    status: 'Canceled',
+    items: [
+      {
+        name: 'Denim Jacket (Indigo, L)',
+        image: FASHION_PRODUCTS[7].image,
+        price: 2299,
+      },
+    ],
+  },
+];
+
+export const ADMIN_STATS = {
+  totalOrders: '156',
+  totalOrdersChange: '+ 12%',
+  revenue: '₹2,45,300',
+  revenueChange: '+ 16%',
+  avgOrder: '₹1,572',
+  avgOrderChange: '+ 6%',
+  customers: '1,024',
+  customersChange: '+ 8%',
+  products: '48',
+  productsChange: '+ 5%',
+};
