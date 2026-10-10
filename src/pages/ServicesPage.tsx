@@ -13,7 +13,7 @@ import {
   MessageSquare,
 } from 'lucide-react';
 import { services } from '../data/services';
-import { siteConfig, formatCurrency } from '../data/siteConfig';
+import { siteConfig } from '../data/siteConfig';
 import { useQuoteModal } from '../context/QuoteModalContext';
 
 const iconMap: Record<string, React.ReactNode> = {
@@ -62,9 +62,9 @@ export const ServicesPage: React.FC = () => {
                     {iconMap[srv.iconName] || <Sparkles className="w-6 h-6 text-[#B27338]" />}
                   </div>
                   <div className="text-right">
-                    <span className="text-[10px] uppercase tracking-wider text-[#8A8892]">Starts at</span>
+                    <span className="text-[10px] uppercase tracking-wider text-[#8A8892]">Scope</span>
                     <div className="text-base font-bold text-[#191A1E] dark:text-[#F4F2EC]">
-                      {formatCurrency(srv.startingPrice)}
+                      Custom
                     </div>
                   </div>
                 </div>

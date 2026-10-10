@@ -104,21 +104,6 @@ export interface ServiceItem {
   iconName: string;
 }
 
-export interface PricingPlan {
-  id: string;
-  name: string;
-  tagline: string;
-  startingPrice: number;
-  priceRangeFormatted: string;
-  description: string;
-  bestFor: string;
-  popular?: boolean;
-  includedFeatures: string[];
-  notIncluded?: string[];
-  additionalPageCost: string;
-  maintenanceMonthlyCost: string;
-}
-
 export interface PortfolioItem {
   id: string;
   title: string;

@@ -47,7 +47,7 @@ export const CategoryCard: React.FC<CategoryCardProps> = ({ category }) => {
 
         <div className="pt-2 border-t border-[#E6E1D6] dark:border-[#242732] flex items-center justify-between text-xs">
           <span className="text-[11px] text-[#8A8892] dark:text-[#6B6A73]">
-            {category.priceRange}
+            Tailored launch scope
           </span>
           <span className="inline-flex items-center gap-1 font-semibold text-[#B27338] dark:text-[#C88645] group-hover:translate-x-0.5 transition-transform">
             <span>Explore Category</span>

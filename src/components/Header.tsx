@@ -42,7 +42,6 @@ export const Header: React.FC<HeaderProps> = ({ onOpenSearch }) => {
     { name: 'Templates', href: '/templates' },
     { name: 'Services', href: '/services' },
     { name: 'Portfolio', href: '/portfolio' },
-    { name: 'Pricing', href: '/pricing' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
   ];

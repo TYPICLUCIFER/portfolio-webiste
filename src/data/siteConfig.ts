@@ -27,13 +27,6 @@ export const siteConfig = {
     dribbble: 'https://dribbble.com',
   },
 
-  // Currency
-  currency: {
-    code: 'INR',
-    symbol: '₹',
-    locale: 'en-IN',
-  },
-
   // Trust indicators (Sample data until verified figures are provided)
   trustIndicators: [
     {
@@ -67,13 +60,3 @@ export const siteConfig = {
     'Sample Template Data & Visual Preview — Replace with your supplied template designs via src/data/templates.ts.',
 };
 
-/**
- * Format currency in Indian Rupees format (e.g. ₹15,000)
- */
-export function formatCurrency(amount: number): string {
-  return new Intl.NumberFormat('en-IN', {
-    style: 'currency',
-    currency: 'INR',
-    maximumFractionDigits: 0,
-  }).format(amount);
-}

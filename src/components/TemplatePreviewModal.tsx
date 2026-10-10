@@ -12,7 +12,6 @@ import {
 } from 'lucide-react';
 import { usePreviewModal } from '../context/PreviewModalContext';
 import { useQuoteModal } from '../context/QuoteModalContext';
-import { formatCurrency } from '../data/siteConfig';
 
 type DeviceMode = 'desktop' | 'tablet' | 'mobile';
 
@@ -73,10 +72,6 @@ export const TemplatePreviewModal: React.FC = () => {
               {activeTemplate.name}
             </h2>
           </div>
-
-          <span className="text-xs font-semibold px-2.5 py-1 rounded-sm bg-[#241D17] text-[#C88645] border border-[#523E2A]">
-            Starting at {formatCurrency(activeTemplate.startingPrice)}
-          </span>
         </div>
 
         {/* Device Mode Switcher */}

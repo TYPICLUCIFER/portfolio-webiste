@@ -4,7 +4,6 @@ import { Search, X, ArrowRight, LayoutTemplate, Sparkles, Folder } from 'lucide-
 import { templates } from '../data/templates';
 import { categories } from '../data/categories';
 import { services } from '../data/services';
-import { formatCurrency } from '../data/siteConfig';
 
 interface SearchModalProps {
   isOpen: boolean;
@@ -184,12 +183,7 @@ export const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => 
                             </p>
                           </div>
                         </div>
-                        <div className="flex items-center gap-3 shrink-0 ml-2">
-                          <span className="text-xs font-semibold text-[#B27338] dark:text-[#C88645]">
-                            {formatCurrency(item.startingPrice)}
-                          </span>
-                          <ArrowRight className="w-3.5 h-3.5 text-[#8A8892] group-hover:text-[#B27338] group-hover:translate-x-0.5 transition-all" />
-                        </div>
+                        <ArrowRight className="w-3.5 h-3.5 text-[#8A8892] group-hover:text-[#B27338] group-hover:translate-x-0.5 transition-all shrink-0 ml-2" />
                       </div>
                     ))}
                   </div>

@@ -10,7 +10,6 @@ import {
   Layers,
 } from 'lucide-react';
 import type { TemplateItem } from '../types';
-import { formatCurrency } from '../data/siteConfig';
 import { usePreviewModal } from '../context/PreviewModalContext';
 import { useQuoteModal } from '../context/QuoteModalContext';
 
@@ -109,17 +108,8 @@ export const TemplateCard: React.FC<TemplateCardProps> = ({
             </div>
           </div>
 
-          {/* Pricing & Card Action Buttons */}
-          <div className="pt-5 mt-4 border-t border-[#E6E1D6] dark:border-[#242732] flex items-center justify-between flex-wrap gap-3">
-            <div>
-              <span className="text-[10px] uppercase tracking-wider text-[#8A8892] dark:text-[#6B6A73]">
-                Starting from
-              </span>
-              <p className="text-lg font-bold text-[#191A1E] dark:text-[#F4F2EC]">
-                {formatCurrency(template.startingPrice)}
-              </p>
-            </div>
-
+          {/* Card Action Buttons */}
+          <div className="pt-5 mt-4 border-t border-[#E6E1D6] dark:border-[#242732] flex items-center justify-end flex-wrap gap-3">
             <div className="flex items-center gap-2">
               <button
                 type="button"
@@ -234,17 +224,8 @@ export const TemplateCard: React.FC<TemplateCardProps> = ({
           </div>
         </div>
 
-        {/* Pricing & Footer Actions */}
+        {/* Footer Actions */}
         <div className="pt-3 border-t border-[#E6E1D6] dark:border-[#242732] space-y-3">
-          <div className="flex items-baseline justify-between">
-            <span className="text-[10px] uppercase tracking-wider text-[#8A8892] dark:text-[#6B6A73]">
-              Starting Price
-            </span>
-            <span className="text-base font-bold text-[#191A1E] dark:text-[#F4F2EC]">
-              {formatCurrency(template.startingPrice)}
-            </span>
-          </div>
-
           <div className="grid grid-cols-2 gap-2">
             <Link
               to={`/templates/view/${template.slug}`}

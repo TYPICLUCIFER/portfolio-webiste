@@ -37,8 +37,6 @@ const FEATURE_FILTERS: TemplateFeature[] = [
 
 const SORT_OPTIONS = [
   { id: 'featured', label: 'Featured First' },
-  { id: 'price-low', label: 'Price: Low to High' },
-  { id: 'price-high', label: 'Price: High to Low' },
   { id: 'newest', label: 'Newest First' },
   { id: 'name-az', label: 'Name: A to Z' },
 ];
@@ -52,7 +50,6 @@ export const CataloguePage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedStyles, setSelectedStyles] = useState<DesignStyle[]>([]);
   const [selectedFeatures, setSelectedFeatures] = useState<TemplateFeature[]>([]);
-  const [priceMax, setPriceMax] = useState<number>(50000);
   const [sortBy, setSortBy] = useState<string>('featured');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [isMobileFiltersOpen, setIsMobileFiltersOpen] = useState(false);
@@ -79,7 +76,6 @@ export const CataloguePage: React.FC = () => {
     setSearchQuery('');
     setSelectedStyles([]);
     setSelectedFeatures([]);
-    setPriceMax(50000);
     setSortBy('featured');
     setSearchParams({});
     setVisibleCount(ITEMS_PER_PAGE);
@@ -118,23 +114,12 @@ export const CataloguePage: React.FC = () => {
           return false;
         }
 
-        // Max price filter
-        if (t.startingPrice > priceMax) {
-          return false;
-        }
-
         return true;
       })
       .sort((a, b) => {
         if (sortBy === 'featured') {
           if (a.featured === b.featured) return 0;
           return a.featured ? -1 : 1;
-        }
-        if (sortBy === 'price-low') {
-          return a.startingPrice - b.startingPrice;
-        }
-        if (sortBy === 'price-high') {
-          return b.startingPrice - a.startingPrice;
         }
         if (sortBy === 'newest') {
           return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
@@ -149,7 +134,6 @@ export const CataloguePage: React.FC = () => {
     searchQuery,
     selectedStyles,
     selectedFeatures,
-    priceMax,
     sortBy,
   ]);
 
@@ -158,8 +142,7 @@ export const CataloguePage: React.FC = () => {
     selectedCategory !== 'all' ||
     searchQuery.trim() !== '' ||
     selectedStyles.length > 0 ||
-    selectedFeatures.length > 0 ||
-    priceMax < 50000;
+    selectedFeatures.length > 0;
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 space-y-10">
@@ -175,7 +158,7 @@ export const CataloguePage: React.FC = () => {
         </h1>
 
         <p className="text-base text-[#595861] dark:text-[#9E9DA6] leading-relaxed">
-          Filter by industry, aesthetic style, features, and price range. Every template includes fully responsive layouts, clean code, and fast delivery.
+          Filter by industry, aesthetic style, and features. Every template includes fully responsive layouts, clean code, and fast delivery.
         </p>
       </div>
 
@@ -234,31 +217,6 @@ export const CataloguePage: React.FC = () => {
                   </button>
                 );
               })}
-            </div>
-          </div>
-
-          {/* Price Range Slider */}
-          <div className="space-y-2 pt-4 border-t border-[#E6E1D6] dark:border-[#242732]">
-            <div className="flex items-center justify-between text-xs">
-              <label className="font-bold uppercase tracking-wider text-[#191A1E] dark:text-[#F4F2EC]">
-                Max Starting Price
-              </label>
-              <span className="font-mono font-semibold text-[#B27338] dark:text-[#C88645]">
-                ₹{priceMax.toLocaleString('en-IN')}
-              </span>
-            </div>
-            <input
-              type="range"
-              min="8000"
-              max="50000"
-              step="2000"
-              value={priceMax}
-              onChange={(e) => setPriceMax(Number(e.target.value))}
-              className="w-full accent-[#B27338] cursor-pointer"
-            />
-            <div className="flex justify-between text-[10px] text-[#8A8892]">
-              <span>₹8,000</span>
-              <span>₹50,000</span>
             </div>
           </div>
 
@@ -421,7 +379,7 @@ export const CataloguePage: React.FC = () => {
                 No templates match your filters
               </h3>
               <p className="text-sm text-[#595861] dark:text-[#9E9DA6] max-w-sm mx-auto">
-                Try widening your price range, choosing fewer feature filters, or clearing your search query.
+                Try choosing fewer feature filters or clearing your search query.
               </p>
               <button
                 type="button"

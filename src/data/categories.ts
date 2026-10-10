@@ -10,7 +10,7 @@ export const categories: CategoryItem[] = [
     coverImage: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=80',
     iconName: 'ShoppingBag',
     templateCount: 4,
-    priceRange: '₹18,000 – ₹38,000',
+    priceRange: 'Custom quote',
     featureHighlights: [
       'Interactive Product Quick-view',
       'Filterable Product Collections',
@@ -27,7 +27,7 @@ export const categories: CategoryItem[] = [
     coverImage: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=80',
     iconName: 'GraduationCap',
     templateCount: 3,
-    priceRange: '₹12,000 – ₹24,000',
+    priceRange: 'Custom quote',
     featureHighlights: [
       'Course Curriculum Breakdown',
       'Batch Timetable & Intake Dates',
@@ -44,7 +44,7 @@ export const categories: CategoryItem[] = [
     coverImage: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80',
     iconName: 'Stethoscope',
     templateCount: 3,
-    priceRange: '₹14,000 – ₹26,000',
+    priceRange: 'Custom quote',
     featureHighlights: [
       'Doctor Bio & Credentials',
       'Treatment & Procedure Details',
@@ -57,11 +57,11 @@ export const categories: CategoryItem[] = [
     slug: 'fitness',
     name: 'Fitness & Gyms',
     shortDescription: 'High-energy, conversion-driven websites for fitness studios, CrossFit boxes, yoga spaces, and personal trainers.',
-    fullDescription: 'Dynamic websites with bold typography, trainer spotlights, class timetables, membership pricing comparison, and free-trial pass signups.',
+    fullDescription: 'Dynamic websites with bold typography, trainer spotlights, class timetables, membership plan comparison, and free-trial pass signups.',
     coverImage: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80',
     iconName: 'Dumbbell',
     templateCount: 2,
-    priceRange: '₹10,000 – ₹22,000',
+    priceRange: 'Custom quote',
     featureHighlights: [
       'Weekly Class Schedule Grid',
       'Membership Tier Comparison',
@@ -78,7 +78,7 @@ export const categories: CategoryItem[] = [
     coverImage: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80',
     iconName: 'Briefcase',
     templateCount: 3,
-    priceRange: '₹12,000 – ₹28,000',
+    priceRange: 'Custom quote',
     featureHighlights: [
       'Case Study Deep Dives',
       'Service Matrix & Deliverables',
@@ -95,7 +95,7 @@ export const categories: CategoryItem[] = [
     coverImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
     iconName: 'Building2',
     templateCount: 2,
-    priceRange: '₹16,000 – ₹32,000',
+    priceRange: 'Custom quote',
     featureHighlights: [
       'Interactive Floor Plan Modal',
       'Project Amenities & Location Map',
@@ -112,7 +112,7 @@ export const categories: CategoryItem[] = [
     coverImage: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80',
     iconName: 'Utensils',
     templateCount: 3,
-    priceRange: '₹10,000 – ₹22,000',
+    priceRange: 'Custom quote',
     featureHighlights: [
       'Categorized Food & Wine Menu',
       'Table Reservation Widget',
@@ -129,7 +129,7 @@ export const categories: CategoryItem[] = [
     coverImage: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1200&q=80',
     iconName: 'UserCheck',
     templateCount: 3,
-    priceRange: '₹8,000 – ₹18,000',
+    priceRange: 'Custom quote',
     featureHighlights: [
       'Fullscreen Image & Case Gallery',
       'Client Roster & Press Mentions',
@@ -146,10 +146,10 @@ export const categories: CategoryItem[] = [
     coverImage: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80',
     iconName: 'Compass',
     templateCount: 2,
-    priceRange: '₹14,000 – ₹28,000',
+    priceRange: 'Custom quote',
     featureHighlights: [
       'Day-wise Tour Itinerary Accordion',
-      'Pricing Includes / Excludes Matrix',
+      'Inclusions / Exclusions Matrix',
       'Guest Reviews & Gallery',
       'Custom Trip Query Form'
     ],
@@ -163,7 +163,7 @@ export const categories: CategoryItem[] = [
     coverImage: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80',
     iconName: 'CalendarHeart',
     templateCount: 2,
-    priceRange: '₹10,000 – ₹20,000',
+    priceRange: 'Custom quote',
     featureHighlights: [
       'Interactive RSVP Submission',
       'Ceremony & Event Schedule',

@@ -102,10 +102,10 @@ export const CategoryPage: React.FC = () => {
                 {category.fullDescription}
               </p>
 
-              {/* Pricing & Metric Pill */}
+              {/* Metric Pill */}
               <div className="pt-2 flex flex-wrap items-center gap-4 text-xs">
                 <span className="px-3 py-1 rounded-xs bg-[#F3EFE6] dark:bg-[#1B1E26] font-semibold text-[#191A1E] dark:text-[#F4F2EC]">
-                  Typical Investment: {category.priceRange}
+                  Scope planned after consultation
                 </span>
                 <span className="text-[#8A8892] dark:text-[#6B6A73]">
                   {categoryTemplates.length} Template Architectures Available

@@ -11,7 +11,6 @@ import {
   Monitor,
 } from 'lucide-react';
 import { getTemplateBySlug, templates } from '../data/templates';
-import { formatCurrency } from '../data/siteConfig';
 import { usePreviewModal } from '../context/PreviewModalContext';
 import { useQuoteModal } from '../context/QuoteModalContext';
 import { TemplateCard } from '../components/TemplateCard';
@@ -211,14 +210,14 @@ export const TemplateDetailPage: React.FC = () => {
                 {template.name}
               </h1>
 
-              {/* Price Banner */}
+              {/* Delivery Banner */}
               <div className="p-4 rounded-md bg-[#F7EEE4] dark:bg-[#241D17] border border-[#DFCBB5] dark:border-[#523E2A] flex items-baseline justify-between">
                 <div>
                   <span className="text-[10px] uppercase tracking-wider text-[#8A8892] dark:text-[#9E9DA6]">
-                    Starting Investment
+                    Launch Scope
                   </span>
                   <div className="text-2xl font-black text-[#191A1E] dark:text-[#F4F2EC]">
-                    {formatCurrency(template.startingPrice)}
+                    Custom Quote
                   </div>
                 </div>
                 <div className="text-right text-xs text-[#595861] dark:text-[#9E9DA6]">
@@ -288,7 +287,7 @@ export const TemplateDetailPage: React.FC = () => {
                 className="w-full py-3.5 px-4 text-xs uppercase tracking-wider font-semibold rounded-sm bg-[#B27338] hover:bg-[#9E632B] dark:bg-[#C88645] dark:hover:bg-[#D99754] text-white shadow-sm transition-all duration-150 flex items-center justify-center gap-2"
               >
                 <Sparkles className="w-4 h-4" />
-                <span>Get This Website — {formatCurrency(template.startingPrice)}</span>
+                <span>Get This Website</span>
               </button>
 
               <p className="text-center text-[11px] text-[#8A8892] dark:text-[#6B6A73]">
@@ -299,7 +298,7 @@ export const TemplateDetailPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Package Tiers & Pricing Breakdown */}
+      {/* Package Tiers & Scope Breakdown */}
       {template.packageTiers && template.packageTiers.length > 0 && (
         <section className="bg-[#FFFFFF] dark:bg-[#14161B] border-y border-[#E6E1D6] dark:border-[#242732] py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
@@ -341,9 +340,6 @@ export const TemplateDetailPage: React.FC = () => {
                     </div>
 
                     <div className="py-2 border-y border-[#E6E1D6] dark:border-[#242732]">
-                      <span className="text-2xl font-black text-[#191A1E] dark:text-[#F4F2EC]">
-                        {formatCurrency(tier.price)}
-                      </span>
                       <p className="text-[11px] text-[#8A8892] dark:text-[#6B6A73]">
                         Delivery: {tier.deliveryDays}
                       </p>
@@ -401,9 +397,6 @@ export const TemplateDetailPage: React.FC = () => {
                   <h4 className="text-sm font-bold text-[#191A1E] dark:text-[#F4F2EC]">
                     {addon.name}
                   </h4>
-                  <span className="text-xs font-semibold text-[#B27338] dark:text-[#C88645] shrink-0">
-                    +{formatCurrency(addon.price)}
-                  </span>
                 </div>
                 <p className="text-xs text-[#595861] dark:text-[#9E9DA6]">
                   {addon.description}

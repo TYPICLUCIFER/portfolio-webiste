@@ -12,7 +12,7 @@ import {
 import { useQuoteModal } from '../context/QuoteModalContext';
 import { categories } from '../data/categories';
 import { templates } from '../data/templates';
-import { siteConfig, formatCurrency } from '../data/siteConfig';
+import { siteConfig } from '../data/siteConfig';
 import type { QuoteFormData } from '../types';
 
 const INITIAL_FORM_DATA: QuoteFormData = {
@@ -24,7 +24,7 @@ const INITIAL_FORM_DATA: QuoteFormData = {
   selectedTemplateId: '',
   selectedPackageTierId: '',
   desiredFeatures: [],
-  budgetRange: '₹12,000 – ₹25,000',
+  budgetRange: 'Discuss during consultation',
   expectedLaunchDate: 'Within 2–3 weeks',
   additionalRequirements: '',
 };
@@ -38,13 +38,6 @@ const FEATURE_OPTIONS = [
   'Multi-Language Support',
   'Lead Capture & Email Alerts',
   'SEO & Google Maps Setup',
-];
-
-const BUDGET_OPTIONS = [
-  '₹5,000 – ₹8,000 (Starter Landing Page)',
-  '₹8,000 – ₹15,000 (Standard Business Website)',
-  '₹15,000 – ₹30,000 (Premium Editorial Site)',
-  '₹30,000 – ₹50,000+ (Full E-commerce / Custom)',
 ];
 
 const TIMELINE_OPTIONS = [
@@ -169,7 +162,6 @@ export const QuoteModal: React.FC = () => {
       `• Business: ${formData.businessName || 'Not specified'}\n` +
       `• Category: ${formData.businessCategory}\n` +
       `• Template: ${selectedTemplate ? selectedTemplate.name : 'Custom / Not chosen'}\n` +
-      `• Budget: ${formData.budgetRange}\n` +
       `• Launch: ${formData.expectedLaunchDate}\n` +
       `• Desired Features: ${formData.desiredFeatures.join(', ') || 'Standard package'}`
   );
@@ -259,12 +251,6 @@ export const QuoteModal: React.FC = () => {
                   </span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-[#8A8892] dark:text-[#6B6A73]">Budget Range:</span>
-                  <span className="font-semibold text-[#191A1E] dark:text-[#F4F2EC]">
-                    {formData.budgetRange}
-                  </span>
-                </div>
-                <div className="flex justify-between">
                   <span className="text-[#8A8892] dark:text-[#6B6A73]">Expected Launch:</span>
                   <span className="font-semibold text-[#191A1E] dark:text-[#F4F2EC]">
                     {formData.expectedLaunchDate}
@@ -309,7 +295,7 @@ export const QuoteModal: React.FC = () => {
                       Selected Template:
                     </span>
                     <h3 className="text-sm font-bold text-[#191A1E] dark:text-[#F4F2EC]">
-                      {selectedTemplate.name} ({formatCurrency(selectedTemplate.startingPrice)})
+                      {selectedTemplate.name}
                     </h3>
                   </div>
                   <button
@@ -440,7 +426,7 @@ export const QuoteModal: React.FC = () => {
                     <option value="">I need guidance / Custom design</option>
                     {templates.map((tpl) => (
                       <option key={tpl.id} value={tpl.id}>
-                        {tpl.name} ({formatCurrency(tpl.startingPrice)})
+                        {tpl.name}
                       </option>
                     ))}
                   </select>
@@ -478,25 +464,8 @@ export const QuoteModal: React.FC = () => {
                 </div>
               </div>
 
-              {/* Budget & Timeline */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-xs font-semibold text-[#191A1E] dark:text-[#F4F2EC] mb-1">
-                    Budget Range
-                  </label>
-                  <select
-                    value={formData.budgetRange}
-                    onChange={(e) => setFormData({ ...formData, budgetRange: e.target.value })}
-                    className="w-full px-3 py-2 text-sm rounded-sm bg-[#FFFFFF] dark:bg-[#181A21] border border-[#E6E1D6] dark:border-[#242732] focus:outline-hidden focus:ring-1 focus:ring-[#B27338] text-[#191A1E] dark:text-[#F4F2EC]"
-                  >
-                    {BUDGET_OPTIONS.map((b) => (
-                      <option key={b} value={b}>
-                        {b}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-
+              {/* Timeline */}
+              <div className="grid grid-cols-1 gap-4">
                 <div>
                   <label className="block text-xs font-semibold text-[#191A1E] dark:text-[#F4F2EC] mb-1">
                     Expected Launch Date

@@ -17,17 +17,14 @@ import { categories } from '../data/categories';
 import { templates, getFeaturedTemplates } from '../data/templates';
 import { howItWorksSteps } from '../data/howItWorks';
 import { services } from '../data/services';
-import { pricingPlans } from '../data/pricing';
 import { portfolioItems } from '../data/portfolio';
 import { TrustMetrics } from '../components/TrustMetrics';
 import { SectionHeader } from '../components/SectionHeader';
 import { TemplateCard } from '../components/TemplateCard';
 import { CategoryCard } from '../components/CategoryCard';
-import { useQuoteModal } from '../context/QuoteModalContext';
 import { usePreviewModal } from '../context/PreviewModalContext';
 
 export const HomePage: React.FC = () => {
-  const { openQuoteModal } = useQuoteModal();
   const { openPreview } = usePreviewModal();
   const featuredTemplates = getFeaturedTemplates().slice(0, 4);
 
@@ -100,7 +97,7 @@ export const HomePage: React.FC = () => {
                 </div>
                 <div className="flex items-center gap-1.5">
                   <CheckCircle className="w-4 h-4 text-[#B27338] dark:text-[#C88645]" />
-                  <span>Pricing in INR (from ₹5,000)</span>
+                  <span>Scope tailored after consultation</span>
                 </div>
               </div>
             </div>
@@ -199,7 +196,7 @@ export const HomePage: React.FC = () => {
         <SectionHeader
           badge="Curated Selection"
           title="Featured Website Templates"
-          subtitle="A glimpse of our signature designs with responsive previews, starting prices, and comprehensive feature breakdowns."
+          subtitle="A glimpse of our signature designs with responsive previews, polished layouts, and comprehensive feature breakdowns."
           ctaText="View Complete Catalogue"
           ctaHref="/templates"
         />
@@ -384,7 +381,7 @@ export const HomePage: React.FC = () => {
 
                 <div className="pt-4 border-t border-[#E6E1D6] dark:border-[#242732] flex items-center justify-between text-xs">
                   <span className="font-semibold text-[#B27338] dark:text-[#C88645]">
-                    From ₹{srv.startingPrice.toLocaleString('en-IN')}
+                    Custom scope
                   </span>
                   <span className="text-[#8A8892] dark:text-[#6B6A73]">
                     {srv.timeline}
@@ -396,91 +393,6 @@ export const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* 8. PRICING OVERVIEW SECTION */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeader
-          badge="Clear Investment"
-          title="Transparent Pricing & Service Packages"
-          subtitle="Fixed-scope tiers in Indian Rupees. What you see is what you pay, with optional add-ons and zero surprise hidden charges."
-          ctaText="Explore Full Pricing Guide"
-          ctaHref="/pricing"
-        />
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {pricingPlans.map((plan) => (
-            <div
-              key={plan.id}
-              className={`rounded-md p-6 flex flex-col justify-between border transition-all ${
-                plan.popular
-                  ? 'bg-[#FFFFFF] dark:bg-[#1B1E26] border-[#B27338] dark:border-[#C88645] shadow-lg ring-1 ring-[#B27338]/20 relative'
-                  : 'bg-[#FFFFFF] dark:bg-[#14161B] border-[#E6E1D6] dark:border-[#242732] shadow-xs'
-              }`}
-            >
-              {plan.popular && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                  <span className="text-[10px] uppercase font-bold tracking-wider px-3 py-0.5 rounded-full bg-[#B27338] dark:bg-[#C88645] text-white">
-                    Most Popular
-                  </span>
-                </div>
-              )}
-
-              <div className="space-y-4">
-                <div>
-                  <h3 className="text-lg font-bold text-[#191A1E] dark:text-[#F4F2EC]">
-                    {plan.name}
-                  </h3>
-                  <p className="text-xs text-[#595861] dark:text-[#9E9DA6] mt-1 line-clamp-2">
-                    {plan.description}
-                  </p>
-                </div>
-
-                <div className="py-2 border-y border-[#E6E1D6] dark:border-[#242732]">
-                  <span className="text-2xl font-black text-[#191A1E] dark:text-[#F4F2EC]">
-                    {plan.priceRangeFormatted}
-                  </span>
-                  <p className="text-[11px] text-[#8A8892] dark:text-[#6B6A73] mt-0.5">
-                    One-time development cost
-                  </p>
-                </div>
-
-                {/* Features List */}
-                <div className="space-y-2 text-xs">
-                  <span className="text-[10px] uppercase tracking-wider font-semibold text-[#8A8892] dark:text-[#6B6A73]">
-                    What's Included:
-                  </span>
-                  <ul className="space-y-1.5 text-[#595861] dark:text-[#9E9DA6]">
-                    {plan.includedFeatures.slice(0, 5).map((f, i) => (
-                      <li key={i} className="flex items-start gap-1.5">
-                        <CheckCircle className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
-                        <span>{f}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-
-              <div className="pt-6 mt-4 border-t border-[#E6E1D6] dark:border-[#242732] space-y-2">
-                <button
-                  type="button"
-                  onClick={() =>
-                    openQuoteModal({
-                      packageTierId: plan.id,
-                      packageTierName: plan.name,
-                    })
-                  }
-                  className={`w-full py-2.5 px-3 text-xs uppercase tracking-wider font-semibold rounded-sm text-center transition-colors ${
-                    plan.popular
-                      ? 'bg-[#B27338] hover:bg-[#9E632B] dark:bg-[#C88645] dark:hover:bg-[#D99754] text-white shadow-xs'
-                      : 'border border-[#E6E1D6] dark:border-[#242732] hover:bg-[#F3EFE6] dark:hover:bg-[#181A21] text-[#191A1E] dark:text-[#F4F2EC]'
-                  }`}
-                >
-                  Get Started
-                </button>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
     </div>
   );
 };

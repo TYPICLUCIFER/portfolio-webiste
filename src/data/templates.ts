@@ -249,7 +249,7 @@ export const templates: TemplateItem[] = [
     startingPrice: 14000,
     description:
       'High-impact, dark-themed fitness studio template with high-contrast typography, interactive timetable schedule, trainer spotlights, and membership plan cards.',
-    shortFeatureSummary: 'Weekly class schedule table, membership pricing cards, trainer bios, and free trial pass booking.',
+    shortFeatureSummary: 'Weekly class schedule table, membership plan cards, trainer bios, and free trial pass booking.',
     targetAudience: 'CrossFit boxes, premium gyms, MMA studios, yoga and pilates centers.',
     features: ['Booking', 'Contact Form'],
     includedPages: ['Home', 'Classes & Schedule', 'Membership Tiers', 'Trainers', 'Facility Tour', 'Claim Free Trial'],
@@ -274,7 +274,7 @@ export const templates: TemplateItem[] = [
         price: 14000,
         description: 'Complete fitness website with class timetable and membership lead capture.',
         deliveryDays: '4 Days',
-        includes: ['6 Included Pages', 'Interactive Class Timetable', 'Trainer Profiles', 'Membership Pricing Matrix'],
+        includes: ['6 Included Pages', 'Interactive Class Timetable', 'Trainer Profiles', 'Membership Plan Matrix'],
       },
     ],
     customizationOptions: [
@@ -394,7 +394,7 @@ export const templates: TemplateItem[] = [
     designStyle: 'Editorial',
     startingPrice: 13000,
     description:
-      'Atmospheric culinary template for fine dining, artisanal cafes, and craft cocktail bars. Features categorized food & drink menus with pricing, chef spotlight, and table booking widget.',
+      'Atmospheric culinary template for fine dining, artisanal cafes, and craft cocktail bars. Features categorized food & drink menus, chef spotlight, and table booking widget.',
     shortFeatureSummary: 'Tabbed food & wine menu, table reservation module, private dining inquiry, and photo gallery.',
     targetAudience: 'Bistros, cafes, fine dining establishments, bakeries, and rooftop lounges.',
     features: ['Booking', 'Contact Form', 'Portfolio'],
@@ -578,11 +578,11 @@ export const templates: TemplateItem[] = [
     designStyle: 'Modern',
     startingPrice: 19000,
     description:
-      'Sleek product landing page and software marketing template for tech startups, SaaS founders, and digital product agencies. Includes interactive feature breakdown, pricing toggle, and demo request.',
-    shortFeatureSummary: 'Interactive feature tour, monthly/annual pricing comparison, API docs preview, and demo lead capture.',
+      'Sleek product landing page and software marketing template for tech startups, SaaS founders, and digital product agencies. Includes interactive feature breakdown, plan toggle, and demo request.',
+    shortFeatureSummary: 'Interactive feature tour, monthly/annual plan comparison, API docs preview, and demo lead capture.',
     targetAudience: 'Software startups, mobile app developers, B2B SaaS founders, and API tools.',
     features: ['Dashboard', 'Contact Form', 'Animations'],
-    includedPages: ['Home', 'Features / Product Tour', 'Pricing & Comparison', 'Changelog / Roadmap', 'About Company', 'Request Demo'],
+    includedPages: ['Home', 'Features / Product Tour', 'Plans & Comparison', 'Changelog / Roadmap', 'About Company', 'Request Demo'],
     pageCount: 6,
     responsiveIndicators: { desktop: true, tablet: true, mobile: true },
     coverImage: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80',
@@ -604,7 +604,7 @@ export const templates: TemplateItem[] = [
         price: 19000,
         description: 'Complete SaaS landing page with conversion optimization.',
         deliveryDays: '5 Days',
-        includes: ['6 Included Pages', 'Feature Mockups', 'Pricing Comparison Matrix', 'Demo Booking Calendar'],
+        includes: ['6 Included Pages', 'Feature Mockups', 'Plan Comparison Matrix', 'Demo Booking Calendar'],
       },
     ],
     customizationOptions: [

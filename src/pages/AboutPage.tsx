@@ -57,7 +57,7 @@ export const AboutPage: React.FC = () => {
               Why the Template + Custom Approach Wins
             </h2>
             <p className="text-sm sm:text-base text-[#595861] dark:text-[#9E9DA6] leading-relaxed">
-              Most businesses face a frustrating dilemma: hire an expensive agency for ₹1.5L+ and wait 3 months, or wrestle with frustrating DIY website builders that look generic and break easily.
+              Most businesses face a frustrating dilemma: hire a slow, expensive agency engagement, or wrestle with frustrating DIY website builders that look generic and break easily.
             </p>
             <p className="text-sm sm:text-base text-[#595861] dark:text-[#9E9DA6] leading-relaxed">
               Our studio solves this. We pre-engineer refined, conversion-tested website architectures across 10 business categories. When you choose an architecture, we tailor the typography, imagery, copy, and backend integrations to your brand identity in days rather than months.
